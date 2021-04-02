@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "jd-index-generator"
+version = "0.1.0"
+description = "Generate index file and directory structure for Johnny Decimal using yml template"
+authors = ["jank"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+PyYAML = "^5.4.1"
+click = "^7.1.2"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+bandit = "^1.7.0"
+rope = "^0.18.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
