@@ -58,12 +58,13 @@ def generate(filepath, mkdir):
                     f"/{i}{j}.{k:02d} {reform(project)}"
                 )
 
-    with open(f"{basename}.md", "w") as file:
+    with open(f"{basename}.index.md", "w") as file:
         file.writelines([line + "\n" for line in markdown_lines])
 
     if mkdir:
         for directory in directories:
             Path(directory).mkdir(parents=True, exist_ok=True)
+            Path(f'{directory}/empty').touch()
 
 
 if __name__ == "__main__":
